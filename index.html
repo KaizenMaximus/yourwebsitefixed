@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" href="data:," />
+<title>Your Website Fixed — Rebuilt in 7 Days. $500 Flat.</title>
+<meta name="description" content="Slow, ugly, or not converting? We rebuild your website in 7 days so it sells. $500 flat. Free audit to start." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Authoritative design tokens */
+    --dp-color-ground:#fcfcfd;
+    --dp-color-ink:#16191f;
+    --dp-color-ink-secondary:#454c58;
+    --dp-color-ground-muted:#f3f4f6;
+    --dp-color-rule:#dde0e6;
+    --dp-color-accent:#074ce0;
+    --dp-color-field:#16191f;
+    --dp-color-on-field:#fcfcfd;
+    --dp-color-on-field-secondary:#d0d4dd;
+    --dp-color-panel:#ffffff;
+    --dp-color-on-accent:#ffffff;
+    --dp-typography-body:16px;
+    --dp-typography-interface:15px;
+    --dp-typography-small:14px;
+    --dp-typography-metadata:13px;
+    --dp-typography-label:12px;
+    --dp-typography-body-leading:1.6;
+    --dp-spacing-grid-gap:24px;
+    --dp-radius-panel:12px;
+    --dp-border-hairline:1px;
+    --dp-motion-interaction:160ms;
+    --dp-motion-easing:ease-out;
+
+    /* Derived shades (same hue family as the tokens) */
+    --accent-hover:#063cb8;
+    --accent-soft:#e9effe;
+    --accent-line:#c3d4fb;
+    --accent-on-dark:#a9c2ff;
+    --field-2:#20242d;
+    --field-line:rgba(255,255,255,.12);
+    --danger:#c0362c;
+    --shadow:0 8px 24px rgba(22,25,31,.07);
+    --shadow-lg:0 20px 44px rgba(22,25,31,.12);
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--dp-color-ground);
+    color:var(--dp-color-ink);
+    font-family:"Instrument Sans", sans-serif;
+    font-size:var(--dp-typography-body);
+    line-height:var(--dp-typography-body-leading);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:"Host Grotesk", sans-serif; font-weight:700; letter-spacing:-.02em; line-height:1.05; margin:0}
+  a{color:inherit}
+  img{max-width:100%; display:block}
+  :focus-visible{outline:2px solid var(--dp-color-accent); outline-offset:2px; border-radius:4px}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+  section{padding:76px 0}
+  .bg-muted{background:var(--dp-color-ground-muted)}
+  .bg-dark{background:var(--dp-color-field); color:var(--dp-color-on-field)}
+  .pb-sm{padding-bottom:28px}
+  .pt-sm{padding-top:28px}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--dp-color-ground) 90%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:var(--dp-border-hairline) solid var(--dp-color-rule);
+  }
+  .topbar-in{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+  .brand{display:flex; align-items:center; gap:10px; font-family:"Host Grotesk",sans-serif; font-weight:700; font-size:17px; letter-spacing:-.02em; text-decoration:none}
+  .brand-mark{
+    width:34px; height:34px; border-radius:8px; background:var(--dp-color-accent);
+    display:grid; place-items:center; flex:none;
+  }
+  .brand-mark svg{width:22px; height:22px}
+  .top-links{display:flex; align-items:center; gap:22px; font-size:var(--dp-typography-interface); font-weight:600}
+  .top-links a{text-decoration:none; color:var(--dp-color-ink-secondary)}
+  .top-links a:hover{color:var(--dp-color-ink)}
+  .top-links a.btn{color:var(--dp-color-on-accent)}
+  @media (max-width:760px){ .top-links a:not(.btn){display:none} }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:"Instrument Sans",sans-serif; font-weight:600; font-size:var(--dp-typography-interface);
+    padding:13px 22px; border-radius:8px; border:var(--dp-border-hairline) solid transparent;
+    text-decoration:none; cursor:pointer; white-space:nowrap;
+    transition:transform var(--dp-motion-interaction) var(--dp-motion-easing), background var(--dp-motion-interaction) var(--dp-motion-easing), border-color var(--dp-motion-interaction) var(--dp-motion-easing);
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  .btn-green{background:var(--dp-color-accent); color:var(--dp-color-on-accent)}
+  .btn-green:hover{background:var(--accent-hover)}
+  .btn-dark{background:var(--dp-color-ink); color:var(--dp-color-on-field)}
+  .btn-dark:hover{background:#262b34}
+  .btn-ghost{background:var(--dp-color-panel); border-color:var(--dp-color-rule); color:var(--dp-color-ink)}
+  .btn-ghost:hover{background:var(--dp-color-ground-muted)}
+  .btn-sm{padding:9px 16px; font-size:var(--dp-typography-small)}
+  .btn-lg{padding:16px 28px; font-size:var(--dp-typography-body)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:var(--dp-color-ground); color:var(--dp-color-ink);
+    padding:72px 0 64px;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.45fr 1fr; gap:48px; align-items:center}
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    border:var(--dp-border-hairline) solid var(--dp-color-rule); border-radius:999px; background:var(--dp-color-panel);
+    padding:6px 12px; font-size:var(--dp-typography-label); font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--dp-color-ink-secondary); margin-bottom:22px;
+  }
+  .hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--dp-color-accent)}
+  .hero h1{font-size:clamp(44px, 6vw, 68px); font-weight:700; color:var(--dp-color-ink)}
+  .hero h1 .fix{color:var(--dp-color-accent)}
+  .hero-sub{font-size:clamp(17px,2.2vw,19px); color:var(--dp-color-ink-secondary); max-width:56ch; margin:20px 0 8px}
+  .hero-sub strong{color:var(--dp-color-ink)}
+  .price-row{display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 30px}
+  .chip{
+    display:inline-flex; align-items:center; gap:7px;
+    background:var(--dp-color-panel); border:var(--dp-border-hairline) solid var(--dp-color-rule);
+    border-radius:999px; padding:8px 14px; font-size:13.5px; font-weight:600; color:var(--dp-color-ink-secondary);
+  }
+  .chip b{color:var(--dp-color-accent); font-weight:700}
+  .hero-cta{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+  .hero-note{font-size:var(--dp-typography-metadata); color:var(--dp-color-ink-secondary); margin-top:14px}
+  .hero-note a{color:var(--dp-color-accent); font-weight:600}
+
+  /* browser mock / product diagram */
+  .browser{
+    background:var(--dp-color-panel); border:var(--dp-border-hairline) solid var(--dp-color-rule); border-radius:var(--dp-radius-panel);
+    overflow:hidden; box-shadow:var(--shadow-lg);
+  }
+  .browser-bar{display:flex; align-items:center; gap:8px; padding:11px 14px; border-bottom:var(--dp-border-hairline) solid var(--dp-color-rule); background:var(--dp-color-ground-muted)}
+  .browser-bar i{width:10px;height:10px;border-radius:50%;background:#c3c9d2; display:block}
+  .browser-url{margin-left:8px; flex:1; background:var(--dp-color-panel); border:var(--dp-border-hairline) solid var(--dp-color-rule); border-radius:6px; padding:4px 10px; font-size:var(--dp-typography-label); color:var(--dp-color-ink-secondary)}
+  .browser-body{padding:22px}
+  .ba-toggle{display:flex; gap:6px; background:var(--dp-color-ground-muted); border-radius:999px; padding:4px; margin-bottom:20px}
+  .ba-toggle button{
+    flex:1; border:0; background:transparent; color:var(--dp-color-ink-secondary); font-family:"Instrument Sans",sans-serif;
+    font-weight:600; font-size:13px; padding:8px; border-radius:999px; cursor:pointer;
+    transition:background var(--dp-motion-interaction) var(--dp-motion-easing), color var(--dp-motion-interaction) var(--dp-motion-easing);
+  }
+  .ba-toggle button.active{background:var(--dp-color-accent); color:var(--dp-color-on-accent)}
+  .mock-line{height:10px; border-radius:5px; background:#e3e6eb; margin-bottom:10px}
+  .mock-line.w40{width:40%}.mock-line.w60{width:60%}.mock-line.w75{width:75%}.mock-line.w85{width:85%}
+  .mock-h{height:22px; width:72%; border-radius:6px; background:var(--dp-color-ink); margin-bottom:12px}
+  .mock-btn{display:inline-block; background:var(--dp-color-accent); color:var(--dp-color-on-accent); font-family:"Instrument Sans",sans-serif; font-weight:600; font-size:13px; padding:10px 18px; border-radius:8px; margin-top:8px}
+  .mock-btn.old{background:#d4d8de; color:var(--dp-color-ink-secondary)}
+  .mock-img{height:110px; border-radius:10px; margin-bottom:16px; background:
+    radial-gradient(circle at 78% 22%, rgba(255,255,255,.35) 0 26px, transparent 27px),
+    radial-gradient(circle at 78% 22%, transparent 0 44px, rgba(255,255,255,.28) 45px, transparent 46px),
+    linear-gradient(135deg,#074ce0,#3d74f0)}
+  .mock-img.old{background:repeating-linear-gradient(45deg,#dde0e6,#dde0e6 12px,#ccd1d9 12px,#ccd1d9 24px)}
+  .mock-score{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-top:18px; padding-top:16px; border-top:1px dashed var(--dp-color-rule)}
+  .mock-score .label{font-size:var(--dp-typography-label); text-transform:uppercase; letter-spacing:.06em; color:var(--dp-color-ink-secondary); font-weight:700}
+  .mock-score .num{font-family:"Host Grotesk",sans-serif; font-size:26px; font-weight:700; line-height:1.15}
+  .num.bad{color:var(--danger)}.num.good{color:var(--dp-color-accent)}
+  .mock-hidden{display:none}
+
+  /* ---------- strip ---------- */
+  .strip{border-top:var(--dp-border-hairline) solid var(--dp-color-rule); border-bottom:var(--dp-border-hairline) solid var(--dp-color-rule); background:var(--dp-color-ground)}
+  .strip-in{display:grid; grid-template-columns:repeat(4,1fr); gap:10px var(--dp-spacing-grid-gap); padding:18px 0; font-size:13.5px; font-weight:600; color:var(--dp-color-ink-secondary)}
+  .strip-in span{display:inline-flex; gap:8px; align-items:center}
+  .strip-in svg{width:16px;height:16px;color:var(--dp-color-accent); flex:none}
+
+  /* ---------- sections common ---------- */
+  .kicker{font-size:var(--dp-typography-label); font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--dp-color-accent); margin-bottom:12px}
+  .bg-dark .kicker{color:var(--accent-on-dark)}
+  h2{font-size:clamp(30px,4.4vw,42px); font-weight:700; margin-bottom:14px}
+  .lede{font-size:17px; color:var(--dp-color-ink-secondary); max-width:62ch}
+  .bg-dark .lede{color:var(--dp-color-on-field-secondary)}
+  .section-head{margin-bottom:36px}
+
+  /* problems */
+  .problems{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--dp-spacing-grid-gap)}
+  .problem{
+    background:var(--dp-color-panel); border:var(--dp-border-hairline) solid var(--dp-color-rule); border-radius:var(--dp-radius-panel);
+    padding:26px; box-shadow:var(--shadow);
+  }
+  .problem .stat{font-family:"Host Grotesk",sans-serif; font-size:36px; font-weight:700; color:var(--dp-color-ink); line-height:1}
+  .problem h3{font-size:20px; font-weight:700; margin:14px 0 8px}
+  .problem p{margin:0; color:var(--dp-color-ink-secondary); font-size:var(--dp-typography-interface)}
+  .problem .tag{display:inline-block; margin-top:16px; font-size:var(--dp-typography-label); font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--dp-color-accent); background:var(--accent-soft); padding:5px 10px; border-radius:999px}
+
+  /* calculator */
+  .calc-band{background:var(--dp-color-panel); border:var(--dp-border-hairline) solid var(--dp-color-rule); border-radius:var(--dp-radius-panel); box-shadow:var(--shadow); padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px}
+  .calc-band h3{font-size:26px; font-weight:700; color:var(--dp-color-ink); margin-bottom:8px}
+  .calc-band p{color:var(--dp-color-ink-secondary); font-size:var(--dp-typography-interface); margin:0 0 20px}
+  .field{margin-bottom:16px}
+  .field label{display:block; font-size:13px; font-weight:600; letter-spacing:.02em; margin-bottom:7px; color:var(--dp-color-ink)}
+  .field input, .field select, .field textarea{
+    width:100%; padding:12px 14px; border-radius:8px; border:var(--dp-border-hairline) solid var(--dp-color-rule);
+    background:var(--dp-color-ground); color:var(--dp-color-ink); font-size:var(--dp-typography-interface); font-family:inherit;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--dp-color-accent); outline-offset:1px}
+  input[type=range]{width:100%; accent-color:var(--dp-color-accent)}
+  .range-val{font-family:"Host Grotesk",sans-serif; color:var(--dp-color-accent); font-weight:700}
+  .calc-result{background:var(--accent-soft); border:var(--dp-border-hairline) solid var(--accent-line); border-radius:var(--dp-radius-panel); padding:24px; align-self:start}
+  .calc-result .big{font-family:"Host Grotesk",sans-serif; font-size:clamp(34px,4vw,46px); font-weight:700; color:var(--dp-color-accent); line-height:1.05; letter-spacing:-.02em}
+  .calc-result .cap{font-size:13px; color:var(--dp-color-ink-secondary); margin-top:6px}
+  .calc-rows{margin-top:18px; border-top:1px dashed var(--accent-line); padding-top:14px; display:grid; gap:8px; font-size:var(--dp-typography-small)}
+  .calc-rows div{display:flex; justify-content:space-between; gap:12px}
+  .calc-rows span{color:var(--dp-color-ink-secondary)}
+  .calc-rows b{font-family:"Host Grotesk",sans-serif; font-weight:700; color:var(--dp-color-ink)}
+
+  /* included */
+  .included{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:start}
+  .checklist{list-style:none; margin:0; padding:0; display:grid; gap:0}
+  .checklist li{display:flex; gap:14px; padding:15px 0; border-bottom:var(--dp-border-hairline) solid var(--dp-color-rule)}
+  .checklist li:last-child{border-bottom:0}
+  .check{
+    width:26px; height:26px; border-radius:50%; background:var(--accent-soft); color:var(--dp-color-accent);
+    display:grid; place-items:center; flex:none; margin-top:1px;
+  }
+  .check svg{width:15px;height:15px}
+  .checklist b{display:block; font-size:var(--dp-typography-body)}
+  .checklist span{color:var(--dp-color-ink-secondary); font-size:14.5px}
+  .price-card{
+    background:var(--dp-color-panel); border:var(--dp-border-hairline) solid var(--dp-color-accent); border-radius:var(--dp-radius-panel); padding:30px;
+    box-shadow:var(--shadow); position:sticky; top:84px;
+  }
+  .price-card .plan{font-size:var(--dp-typography-label); font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--dp-color-accent)}
+  .price-amt{font-family:"Host Grotesk",sans-serif; font-size:64px; font-weight:700; letter-spacing:-.02em; line-height:1; margin:10px 0 2px}
+  .price-amt small{font-size:20px; font-weight:600; color:var(--dp-color-ink-secondary)}
+  .price-card ul{list-style:none; margin:18px 0 22px; padding:0; display:grid; gap:9px; font-size:14.5px; color:var(--dp-color-ink-secondary)}
+  .price-card ul li{display:flex; gap:9px}
+  .price-card ul svg{width:17px;height:17px;color:var(--dp-color-accent);flex:none;margin-top:2px}
+  .price-note{font-size:var(--dp-typography-metadata); color:var(--dp-color-ink-secondary); text-align:center; margin-top:12px}
+
+  /* process (dark field) */
+  .days{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--dp-spacing-grid-gap)}
+  .day{background:var(--field-2); border:var(--dp-border-hairline) solid var(--field-line); border-radius:var(--dp-radius-panel); padding:22px}
+  .day .dnum{font-size:var(--dp-typography-label); font-weight:700; color:var(--accent-on-dark); letter-spacing:.07em}
+  .day h3{font-size:17px; font-weight:700; margin:8px 0 6px; color:var(--dp-color-on-field)}
+  .day p{margin:0; font-size:var(--dp-typography-small); color:var(--dp-color-on-field-secondary)}
+  .day.rule{background:var(--dp-color-accent); border-color:var(--dp-color-accent)}
+  .day.rule .dnum{color:#cfe0ff}
+  .day.rule p{color:#dbe7ff}
+
+  /* fit */
+  .fit{display:grid; grid-template-columns:1fr 1fr; gap:var(--dp-spacing-grid-gap)}
+  .fit-card{border-radius:var(--dp-radius-panel); padding:26px; border:var(--dp-border-hairline) solid var(--dp-color-rule); background:var(--dp-color-panel); box-shadow:var(--shadow)}
+  .fit-card.good{border-color:var(--dp-color-accent)}
+  .fit-card h3{font-size:19px; font-weight:700; margin-bottom:14px}
+  .fit-card ul{list-style:none; margin:0; padding:0; display:grid; gap:10px; font-size:var(--dp-typography-interface); color:var(--dp-color-ink-secondary)}
+  .fit-card li{display:flex; gap:10px}
+  .fit-card svg{width:18px;height:18px;flex:none;margin-top:2px}
+  .fit-card.good svg{color:var(--dp-color-accent)}
+  .fit-card.bad svg{color:var(--danger)}
+
+  /* faq */
+  .faq{max-width:760px}
+  details{border-bottom:var(--dp-border-hairline) solid var(--dp-color-rule); padding:18px 0}
+  details summary{font-family:"Host Grotesk",sans-serif; font-weight:600; font-size:17px; cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:16px; align-items:center}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+"; font-size:22px; color:var(--dp-color-accent); font-weight:600; line-height:1; flex:none; transition:transform var(--dp-motion-interaction) var(--dp-motion-easing)}
+  details[open ] summary::after{transform:rotate(45deg)}
+  details p{color:var(--dp-color-ink-secondary); margin:10px 0 2px; font-size:var(--dp-typography-interface); max-width:64ch}
+
+  /* audit (dark closing) */
+  .audit-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start}
+  .audit-grid h2{color:var(--dp-color-on-field)}
+  .audit-points{list-style:none; margin:22px 0 0; padding:0; display:grid; gap:12px; font-size:var(--dp-typography-interface)}
+  .audit-points li{display:flex; gap:11px; color:var(--dp-color-on-field)}
+  .audit-points svg{width:19px;height:19px;color:var(--accent-on-dark);flex:none;margin-top:2px}
+  .audit-form{background:var(--dp-color-panel); color:var(--dp-color-ink); border-radius:var(--dp-radius-panel); padding:26px; box-shadow:var(--shadow-lg)}
+  .audit-form h3{font-size:20px; font-weight:700; margin-bottom:4px}
+  .audit-form .sub{font-size:var(--dp-typography-small); color:var(--dp-color-ink-secondary); margin:0 0 18px}
+  .audit-result{display:none; margin-top:18px; border-top:1px dashed var(--dp-color-rule); padding-top:18px}
+  .audit-result.show{display:block}
+  .audit-result h4{margin:0 0 8px; font-family:"Host Grotesk",sans-serif; font-size:16px}
+  .audit-result p{font-size:var(--dp-typography-small); color:var(--dp-color-ink-secondary); margin:0 0 14px}
+  .audit-msg{
+    background:var(--dp-color-ground-muted); border:var(--dp-border-hairline) solid var(--dp-color-rule); border-radius:8px;
+    padding:14px; font-size:13.5px; white-space:pre-wrap; word-break:break-word; margin-bottom:14px;
+  }
+  .audit-actions{display:flex; flex-wrap:wrap; gap:10px}
+  .copied{font-size:var(--dp-typography-metadata); font-weight:700; color:var(--dp-color-accent); align-self:center}
+  .closing{text-align:center; margin-top:56px; border-top:var(--dp-border-hairline) solid var(--field-line); padding-top:48px}
+  .closing h2{color:var(--dp-color-on-field)}
+  .closing .lede{margin:12px auto 22px}
+
+  footer{background:var(--dp-color-field); border-top:var(--dp-border-hairline) solid var(--field-line); padding:32px 0 44px; color:var(--dp-color-on-field-secondary); font-size:var(--dp-typography-small)}
+  .foot-in{display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center}
+  footer strong{color:var(--dp-color-on-field)}
+  footer a{font-weight:600; color:var(--accent-on-dark)}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1050px){
+    .hero-grid{gap:32px}
+    .days{gap:16px}
+    .problems{gap:16px}
+    .fit{gap:16px}
+    .calc-band{gap:32px}
+    .included{gap:32px}
+    .audit-grid{gap:32px}
+  }
+  @media (max-width:960px){
+    .days{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:760px){
+    section{padding:56px 0}
+    .pb-sm{padding-bottom:24px}
+    .pt-sm{padding-top:24px}
+    .hero{padding:52px 0 48px}
+    .hero-grid{grid-template-columns:1fr}
+    .problems{grid-template-columns:1fr}
+    .calc-band{grid-template-columns:1fr; padding:26px}
+    .included{grid-template-columns:1fr}
+    .price-card{position:static}
+    .days{grid-template-columns:1fr}
+    .fit{grid-template-columns:1fr}
+    .audit-grid{grid-template-columns:1fr}
+    .strip-in{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:480px){
+    .strip-in{grid-template-columns:repeat(2,1fr)}
+    .checklist li{padding:13px 0}
+    .foot-in{display:grid; grid-template-columns:1fr 1fr; align-items:start}
+    .hero-cta .btn{width:100%}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none !important}
+    .btn:hover,.btn:active{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4" width="19" height="15" rx="2.5" stroke="#ffffff" stroke-width="1.8"/><path d="M7 12.2l3.2 3.2L17 8.6" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.8 15.4l3 3" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </span>
+      Your Website Fixed
+    </a>
+    <nav class="top-links">
+      <a href="#problems">The Problem</a>
+      <a href="#included">What's Included</a>
+      <a href="#process">7-Day Process</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-green btn-sm" href="#audit">Get Free Audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-eyebrow"><span class="dot"></span> Now booking rebuilds</span>
+        <h1>Your website,<br /><span class="fix">fixed.</span></h1>
+        <p class="hero-sub">Slow, ugly, or not converting? We rebuild it in <strong>7 days</strong> — fast, clean, and built to sell — for one flat price. No hourly billing. No 6-week agency timeline. No surprises.</p>
+        <div class="price-row">
+          <span class="chip"><b>$500</b> flat — that's it</span>
+          <span class="chip"><b>7 days</b> start to launch</span>
+          <span class="chip"><b>Free</b> audit before you pay anything</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-green btn-lg" href="#audit">Get My Free Audit →</a>
+          <a class="btn btn-ghost btn-lg" href="#included">See What's Included</a>
+        </div>
+        <p class="hero-note">Prefer to talk first? DM us on Instagram — <a href="https://www.instagram.com/yourwebsitefixed/" target="_blank" rel="noopener">@yourwebsitefixed</a></p>
+      </div>
+
+      <div class="browser" aria-label="Before and after website comparison">
+        <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url" id="mockUrl">yourbusiness.com — before</span></div>
+        <div class="browser-body">
+          <div class="ba-toggle" role="tablist" aria-label="Toggle before and after">
+            <button id="btnBefore" class="active" type="button" role="tab" aria-selected="true">Before</button>
+            <button id="btnAfter" type="button" role="tab" aria-selected="false">After — Day 7</button>
+          </div>
+
+          <div id="mockBefore">
+            <div class="mock-img old"></div>
+            <div class="mock-h" style="background:#a7aeb8"></div>
+            <div class="mock-line w85"></div>
+            <div class="mock-line w75"></div>
+            <div class="mock-line w60"></div>
+            <span class="mock-btn old">Click Here</span>
+            <div class="mock-score">
+              <div><div class="label">Load time</div><div class="num bad">6.8s</div></div>
+              <div><div class="label">Mobile score</div><div class="num bad">41/100</div></div>
+              <div><div class="label">Converting?</div><div class="num bad">Barely</div></div>
+            </div>
+          </div>
+
+          <div id="mockAfter" class="mock-hidden">
+            <div class="mock-img"></div>
+            <div class="mock-h"></div>
+            <div class="mock-line w75"></div>
+            <div class="mock-line w60"></div>
+            <span class="mock-btn">Book a Free Call</span>
+            <div class="mock-score">
+              <div><div class="label">Load time</div><div class="num good">0.9s</div></div>
+              <div><div class="label">Mobile score</div><div class="num good">97/100</div></div>
+              <div><div class="label">Converting?</div><div class="num good">Yes</div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap strip-in">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Flat price, agreed up front</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Live in 7 days or we keep working free</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> You own the site — no lock-in</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Built mobile-first</span>
+    </div>
+  </div>
+
+  <!-- PROBLEMS -->
+  <section id="problems" class="bg-muted">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Why your site isn't selling</div>
+        <h2>Three problems. One fix.</h2>
+        <p class="lede">Most small business sites don't have a traffic problem — they have a website problem. Visitors show up, take one look, and leave. Here's what we see on almost every site we audit:</p>
+      </div>
+      <div class="problems">
+        <article class="problem">
+          <div class="stat">6–8s</div>
+          <h3>It's slow</h3>
+          <p>Bloated pages, oversized images, and cheap templates make visitors wait. Past 3 seconds, most people are already gone — and Google ranks you lower for it.</p>
+          <span class="tag">We fix: speed</span>
+        </article>
+        <article class="problem">
+          <div class="stat">2014</div>
+          <h3>It looks dated</h3>
+          <p>People judge your business in seconds, and an old-looking site says "old business." If your site looks worse than your work, you're losing the customers you already earned.</p>
+          <span class="tag">We fix: design</span>
+        </article>
+        <article class="problem">
+          <div class="stat">~1%</div>
+          <h3>It doesn't convert</h3>
+          <p>No clear headline, no obvious next step, no reason to trust you. Visitors can't figure out what to do — so they do nothing, and buy from the competitor whose site made it easy.</p>
+          <span class="tag">We fix: conversion</span>
+        </article>
+      </div>
+
+      <div style="height:28px"></div>
+
+      <!-- CALCULATOR -->
+      <div class="calc-band">
+        <div>
+          <h3>What is a broken site costing you?</h3>
+          <p>Run your own numbers. Most owners are surprised how fast a low conversion rate adds up over a year.</p>
+          <div class="field">
+            <label for="visitors">Monthly website visitors — <span class="range-val" id="visitorsVal">800</span></label>
+            <input type="range" id="visitors" min="100" max="10000" step="50" value="800" />
+          </div>
+          <div class="field">
+            <label for="convRate">Current conversion rate — <span class="range-val" id="convVal">1.0%</span></label>
+            <input type="range" id="convRate" min="0.2" max="5" step="0.1" value="1" />
+          </div>
+          <div class="field">
+            <label for="jobValue">Average value of one customer / job ($)</label>
+            <input type="number" id="jobValue" min="0" step="10" value="250" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <div class="label" style="font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#454c58;font-weight:700">Estimated revenue left on the table</div>
+          <div class="big" id="lostYear">$0 / yr</div>
+          <div class="cap">If your rebuild lifted conversion to a modest 3% — a realistic target for a fast site with a clear call to action.</div>
+          <div class="calc-rows">
+            <div><span>Customers now</span><b id="custNow">—</b></div>
+            <div><span>Customers at 3%</span><b id="custNew">—</b></div>
+            <div><span>Extra revenue / month</span><b id="lostMonth">—</b></div>
+            <div><span>$500 rebuild pays for itself in</span><b id="payback">—</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INCLUDED -->
+  <section id="included">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">The rebuild</div>
+        <h2>Everything in the $500 rebuild</h2>
+        <p class="lede">One flat price covers the full rebuild — design, build, speed, and launch. You approve the direction before we build, and you own everything when we're done.</p>
+      </div>
+      <div class="included">
+        <ul class="checklist">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Full redesign, mobile-first</b><span>A clean, modern site designed for phones first — because that's where most of your customers are looking.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Speed overhaul</b><span>Compressed images, lean code, and proper caching so pages load in about a second — not eight.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Copy that sells</b><span>We rewrite your headline and calls to action so a visitor knows in 5 seconds what you do, who it's for, and what to do next.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Built to convert</b><span>Click-to-call, booking/contact forms that actually work, reviews up front, and one clear action on every page.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>SEO basics done right</b><span>Titles, descriptions, headings, and local basics set up properly so Google can find and rank the new site.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Launch + handover</b><span>We launch it, test every link and form, and hand you the logins with a short walkthrough. No hostage situations.</span></div></li>
+        </ul>
+
+        <aside class="price-card">
+          <div class="plan">The 7-Day Rebuild</div>
+          <div class="price-amt">$500 <small>flat</small></div>
+          <p style="margin:0;color:var(--dp-color-ink-secondary);font-size:15px">One payment structure, agreed before we start. Half to book your slot, half at launch.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Up to 5 pages rebuilt</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 2 rounds of revisions</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Free audit before you commit</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> You keep your domain &amp; content</li>
+          </ul>
+          <a class="btn btn-green" href="#audit" style="width:100%">Start With the Free Audit</a>
+          <p class="price-note">Need more than 5 pages, e-commerce, or custom features? We'll quote it honestly after the audit — the rebuild itself stays $500.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="bg-dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">How it works</div>
+        <h2>Live in 7 days. Here's the week.</h2>
+        <p class="lede">A fixed process is how we hit a fixed deadline at a fixed price. You always know what happens next — and your only job is quick feedback at two checkpoints.</p>
+      </div>
+      <div class="days">
+        <div class="day"><div class="dnum">DAY 0</div><h3>Free audit</h3><p>Send us your site. We score its speed, design, and conversion — and tell you straight up if a rebuild will actually help.</p></div>
+        <div class="day"><div class="dnum">DAY 1</div><h3>Plan &amp; direction</h3><p>We map the new pages, rewrite the headline and calls to action, and lock the look. You approve the direction.</p></div>
+        <div class="day"><div class="dnum">DAYS 2–4</div><h3>Build</h3><p>We build the full site — mobile-first, fast, with your content, photos, reviews, and booking or contact flow in place.</p></div>
+        <div class="day"><div class="dnum">DAY 5</div><h3>Your review</h3><p>You get a private preview link. Send one list of changes — we handle both revision rounds inside the week.</p></div>
+        <div class="day"><div class="dnum">DAY 6</div><h3>Speed &amp; polish</h3><p>Final speed pass, SEO basics, form and link testing on real phones and desktops. Nothing ships broken.</p></div>
+        <div class="day"><div class="dnum">DAY 7</div><h3>Launch</h3><p>Your new site goes live on your domain. You get all logins and a walkthrough. Fixed — and selling.</p></div>
+        <div class="day"><div class="dnum">AFTER</div><h3>You're not locked in</h3><p>The site is yours. Change it yourself, hire anyone, or ask us about ongoing tweaks — your call, no contract.</p></div>
+        <div class="day rule"><div class="dnum">THE RULE</div><h3>No launch, no final payment</h3><p>The second half is only due when your new site is live. If we miss day 7 on our end, we keep working free until it's up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIT -->
+  <section class="bg-muted pb-sm">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Straight talk</div>
+        <h2>Who this is — and isn't — for</h2>
+      </div>
+      <div class="fit">
+        <div class="fit-card good">
+          <h3>This is for you if…</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> You run a local or service business and your site embarrasses you a little</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> You get visitors or referrals, but the phone isn't ringing from the site</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> You want it handled — fast, flat price, no tech headaches</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Your site was built years ago, DIY'd, or never finished</li>
+          </ul>
+        </div>
+        <div class="fit-card bad">
+          <h3>It's not for you if…</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg> You need a large e-commerce store or a custom web app — different job, different price</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg> You want months of brand strategy and committee approvals</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg> Your site is already fast and converting well — the audit will tell you that for free</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-muted pt-sm">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Questions</div>
+        <h2>Before you ask</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is it really $500 flat?</summary>
+          <p>Yes — for a rebuild of up to 5 pages, that's the full price: half to book your slot, half when the site launches. If your project needs more (extra pages, online store, custom features), we flag it in the free audit and quote it separately before any work starts. You'll never get a surprise bill.</p>
+        </details>
+        <details>
+          <summary>What does the free audit include?</summary>
+          <p>We score your current site on speed, mobile experience, design, and conversion — and send you a short, plain-English breakdown of what's hurting you and what we'd fix first. No obligation: if the audit says your site is fine, we'll tell you.</p>
+        </details>
+        <details>
+          <summary>Can you really finish in 7 days?</summary>
+          <p>Yes, because the scope is fixed and the process is set. The clock starts once we have your content and your Day 1 approval. If a delay is on our end, we keep working at no extra cost until you're live.</p>
+        </details>
+        <details>
+          <summary>What do you need from me?</summary>
+          <p>Your logo and photos if you have them, access to your current site/domain, and quick feedback at two checkpoints. No photos or copy? We can work with what exists and clean up the words for you — that's part of the rebuild.</p>
+        </details>
+        <details>
+          <summary>Do I own my website?</summary>
+          <p>Completely. Your domain, your content, your logins. We build it so any developer could pick it up later — including you. No monthly lock-in required to keep your own site online.</p>
+        </details>
+        <details>
+          <summary>What if I don't have a website yet?</summary>
+          <p>Then it's not a rebuild, it's a build — same 7-day process and same flat approach for a simple 5-page site. Request the audit and tell us you're starting from scratch.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT -->
+  <section id="audit" class="bg-dark">
+    <div class="wrap">
+      <div class="audit-grid">
+        <div>
+          <div class="kicker">Free audit</div>
+          <h2>Find out what's broken. Free.</h2>
+          <p class="lede">Tell us where to look. You'll get a plain-English scorecard for your site — speed, mobile, design, and conversion — plus exactly what we'd fix first. If a rebuild won't help you, we'll say so.</p>
+          <ul class="audit-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Speed &amp; mobile score, in real numbers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> The top 3 things costing you customers</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> A straight yes/no on whether $500 fixes it</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> No pitch deck, no pressure call</li>
+          </ul>
+        </div>
+
+        <form class="audit-form" id="auditForm">
+          <h3>Request your free audit</h3>
+          <p class="sub">Takes 30 seconds. We'll reply with your scorecard.</p>
+          <div class="field">
+            <label for="fUrl">Your website</label>
+            <input type="text" id="fUrl" placeholder="yourbusiness.com" autocomplete="url" required />
+          </div>
+          <div class="field">
+            <label for="fBiz">What kind of business?</label>
+            <input type="text" id="fBiz" placeholder="e.g. Roofing company in Miami" required />
+          </div>
+          <div class="field">
+            <label for="fProblem">Biggest problem with your site</label>
+            <select id="fProblem">
+              <option>It's slow</option>
+              <option>It looks outdated</option>
+              <option>It gets visitors but no calls / sales</option>
+              <option>It's broken or unfinished</option>
+              <option>I don't have a website yet</option>
+              <option>All of the above</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fContact">Your name &amp; best contact (email or Instagram)</label>
+            <input type="text" id="fContact" placeholder="e.g. Alex — alex@yourbusiness.com" required />
+          </div>
+          <button class="btn btn-green" type="submit" style="width:100%">Build My Audit Request →</button>
+
+          <div class="audit-result" id="auditResult">
+            <h4>Your audit request is ready</h4>
+            <p>Copy it and send it to us on Instagram — that's the fastest way to get your free audit started.</p>
+            <div class="audit-msg" id="auditMsg"></div>
+            <div class="audit-actions">
+              <button class="btn btn-dark btn-sm" type="button" id="copyBtn">Copy Request</button>
+              <a class="btn btn-green btn-sm" href="https://www.instagram.com/yourwebsitefixed/" target="_blank" rel="noopener">DM @yourwebsitefixed</a>
+              <span class="copied" id="copiedMsg" hidden>Copied ✓</span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="closing">
+        <h2 style="font-size:clamp(28px,4vw,38px)">Your website is either selling for you —<br />or selling for your competitor.</h2>
+        <p class="lede">Seven days from now it could be the first one. $500 flat.</p>
+        <a class="btn btn-green btn-lg" href="#audit">Get My Free Audit →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span><strong>Your Website Fixed</strong> — rebuilt in 7 days, $500 flat.</span>
+    <span>Find us on Instagram: <a href="https://www.instagram.com/yourwebsitefixed/" target="_blank" rel="noopener">@yourwebsitefixed</a></span>
+  </div>
+</footer>
+
+<script>
+  // Before / After toggle
+  var btnBefore = document.getElementById('btnBefore');
+  var btnAfter = document.getElementById('btnAfter');
+  var mockBefore = document.getElementById('mockBefore');
+  var mockAfter = document.getElementById('mockAfter');
+  var mockUrl = document.getElementById('mockUrl');
+  function showBefore(){
+    btnBefore.classList.add('active'); btnAfter.classList.remove('active');
+    btnBefore.setAttribute('aria-selected', 'true'); btnAfter.setAttribute('aria-selected', 'false');
+    mockBefore.classList.remove('mock-hidden'); mockAfter.classList.add('mock-hidden');
+    mockUrl.textContent = 'yourbusiness.com — before';
+  }
+  function showAfter(){
+    btnAfter.classList.add('active'); btnBefore.classList.remove('active');
+    btnAfter.setAttribute('aria-selected', 'true'); btnBefore.setAttribute('aria-selected', 'false');
+    mockAfter.classList.remove('mock-hidden'); mockBefore.classList.add('mock-hidden');
+    mockUrl.textContent = 'yourbusiness.com — after, day 7';
+  }
+  btnBefore.addEventListener('click', showBefore);
+  btnAfter.addEventListener('click', showAfter);
+
+  // Revenue calculator
+  var visitors = document.getElementById('visitors');
+  var convRate = document.getElementById('convRate');
+  var jobValue = document.getElementById('jobValue');
+  var visitorsVal = document.getElementById('visitorsVal');
+  var convVal = document.getElementById('convVal');
+  function money(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+  function calc(){
+    var v = parseFloat(visitors.value) || 0;
+    var c = parseFloat(convRate.value) || 0;
+    var j = parseFloat(jobValue.value) || 0;
+    visitorsVal.textContent = v.toLocaleString('en-US');
+    convVal.textContent = c.toFixed(1) + '%';
+    var target = Math.max(3, c);
+    var now = v * (c / 100);
+    var next = v * (target / 100);
+    var extraMonth = (next - now) * j;
+    var extraYear = extraMonth * 12;
+    document.getElementById('custNow').textContent = now.toFixed(1) + ' / mo';
+    document.getElementById('custNew').textContent = next.toFixed(1) + ' / mo';
+    document.getElementById('lostMonth').textContent = money(extraMonth);
+    document.getElementById('lostYear').textContent = money(extraYear) + ' / yr';
+    var payback = document.getElementById('payback');
+    if (extraMonth > 0) {
+      var days = Math.ceil(500 / (extraMonth / 30));
+      payback.textContent = days <= 1 ? 'under a day' : ('~' + days + ' days');
+    } else {
+      payback.textContent = '—';
+    }
+  }
+  visitors.addEventListener('input', calc);
+  convRate.addEventListener('input', calc);
+  jobValue.addEventListener('input', calc);
+  calc();
+
+  // Audit form -> builds a ready-to-send request (no server; user sends it via Instagram DM)
+  var form = document.getElementById('auditForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var url = document.getElementById('fUrl').value.trim();
+    var biz = document.getElementById('fBiz').value.trim();
+    var prob = document.getElementById('fProblem').value;
+    var contact = document.getElementById('fContact').value.trim();
+    var msg = 'FREE AUDIT REQUEST — Your Website Fixed\n' +
+      'Website: ' + url + '\n' +
+      'Business: ' + biz + '\n' +
+      'Biggest problem: ' + prob + '\n' +
+      'Contact: ' + contact + '\n' +
+      'Interested in: the $500 flat, 7-day rebuild if the audit shows it will help.';
+    document.getElementById('auditMsg').textContent = msg;
+    var result = document.getElementById('auditResult');
+    result.classList.add('show');
+    document.getElementById('copiedMsg').hidden = true;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var text = document.getElementById('auditMsg').textContent;
+    function done(){ document.getElementById('copiedMsg').hidden = false; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      document.body.removeChild(ta); done();
+    }
+  });
+</script>
+</body>
+</html>
