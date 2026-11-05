@@ -296,6 +296,52 @@
   footer strong{color:var(--dp-color-on-field)}
   footer a{font-weight:600; color:var(--accent-on-dark)}
 
+  /* ---------- portfolio / reviews / referral / phases ---------- */
+  .example-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--dp-color-accent);background:var(--accent-soft);border:1px solid var(--accent-line);padding:5px 10px;border-radius:999px}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--dp-spacing-grid-gap);align-items:stretch}
+  .portfolio-card{background:var(--dp-color-panel);border:var(--dp-border-hairline) solid var(--dp-color-rule);border-radius:var(--dp-radius-panel);padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+  .portfolio-card h3{font-size:19px;line-height:1.2}
+  .portfolio-card .biz-type{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dp-color-ink-secondary)}
+  .portfolio-card p{margin:0;color:var(--dp-color-ink-secondary);font-size:14.5px;line-height:1.55}
+  .mini-browser{border:var(--dp-border-hairline) solid var(--dp-color-rule);border-radius:10px;overflow:hidden;background:var(--dp-color-panel)}
+  .mini-browser .browser-bar{padding:8px 10px}
+  .mini-browser .browser-body{padding:14px}
+  .mini-browser .mock-img{height:72px;margin-bottom:12px}
+  .mini-browser .mock-h{height:16px;margin-bottom:8px}
+  .ba-split{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+  .ba-split div{border:1px dashed var(--dp-color-rule);border-radius:8px;padding:10px}
+  .ba-split .ba-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dp-color-ink-secondary);margin-bottom:6px}
+  .ba-split .ba-val{font-family:"Host Grotesk",sans-serif;font-weight:700;font-size:15px;line-height:1.25}
+  .ba-split .ba-val.good{color:var(--dp-color-accent)} .ba-split .ba-val.bad{color:var(--danger)}
+  .result-rows{display:grid;gap:8px;font-size:14px;border-top:1px dashed var(--dp-color-rule);padding-top:12px}
+  .result-rows div{display:flex;justify-content:space-between;gap:12px}
+  .result-rows span{color:var(--dp-color-ink-secondary)} .result-rows b{font-family:"Host Grotesk",sans-serif;text-align:right}
+  .card-cta{margin-top:auto;padding-top:6px;font-weight:700;font-size:14.5px;color:var(--dp-color-accent);text-decoration:none}
+  .card-cta:hover{text-decoration:underline}
+  .disclaimer{margin-top:18px;font-size:13px;color:var(--dp-color-ink-secondary);text-align:center}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--dp-spacing-grid-gap)}
+  .review-card{background:var(--dp-color-panel);border:1px dashed var(--accent-line);border-radius:var(--dp-radius-panel);padding:24px;display:flex;flex-direction:column;gap:12px}
+  .review-card h3{font-size:17px}
+  .review-card p{margin:0;color:var(--dp-color-ink-secondary);font-size:14.5px;line-height:1.55}
+  .review-card .slot{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--dp-color-accent)}
+  .phase-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  .phase{background:rgba(255,255,255,.06);border:1px solid var(--field-line);border-radius:10px;padding:16px}
+  .phase .pnum{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-on-dark)}
+  .phase h3{font-size:15px;color:#fff;margin:6px 0 4px}
+  .phase p{margin:0;font-size:13px;color:var(--dp-color-on-field-secondary);line-height:1.5}
+  .phase-note{margin-top:16px;background:rgba(255,255,255,.06);border:1px solid var(--field-line);border-radius:10px;padding:16px 18px;color:var(--dp-color-on-field-secondary);font-size:14.5px;line-height:1.6}
+  .phase-note strong{color:#fff}
+  .referral-card{background:var(--dp-color-panel);border:var(--dp-border-hairline) solid var(--dp-color-accent);border-radius:var(--dp-radius-panel);padding:28px;box-shadow:var(--shadow)}
+  .referral-split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}
+  .referral-split div{background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:10px;padding:18px}
+  .referral-split .amt{font-family:"Host Grotesk",sans-serif;font-size:32px;font-weight:700;color:var(--dp-color-accent);line-height:1}
+  .referral-split h3{font-size:16px;margin:8px 0 6px}
+  .referral-split p{margin:0;font-size:14px;color:var(--dp-color-ink-secondary)}
+  .price-referral{margin-top:14px;background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:8px;padding:12px 14px;font-size:13.5px;color:var(--dp-color-ink-secondary);line-height:1.5}
+  .price-referral strong{color:var(--dp-color-ink)}
+  @media (max-width:960px){.portfolio-grid,.review-grid{grid-template-columns:1fr 1fr}.phase-flow{grid-template-columns:1fr 1fr}}
+  @media (max-width:760px){.portfolio-grid,.review-grid,.phase-flow,.referral-split{grid-template-columns:1fr}}
+
   /* ---------- responsive ---------- */
   @media (max-width:1050px){
     .hero-grid{gap:32px}
@@ -501,12 +547,12 @@
       </div>
       <div class="included">
         <ul class="checklist">
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Full redesign, mobile-first</b><span>A clean, modern site designed for phones first — because that's where most of your customers are looking.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Full redesign, mobile-first</b><span>A clean, modern site designed for phones first — because that's where most of your customers are looking. Smooth scroll animations, clean typography and spacing, and a layout that feels calm and premium on every screen.</span></div></li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Speed overhaul</b><span>Compressed images, lean code, and proper caching so pages load in about a second — not eight.</span></div></li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Copy that sells</b><span>We rewrite your headline and calls to action so a visitor knows in 5 seconds what you do, who it's for, and what to do next.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Conversion-focused copy that sells</b><span>We rewrite your headline and calls to action so a visitor knows in 5 seconds what you do, who it's for, and what to do next — paired with clean, animated visuals that guide people toward booking, calling, or buying.</span></div></li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Built to convert</b><span>Click-to-call, booking/contact forms that actually work, reviews up front, and one clear action on every page.</span></div></li>
           <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>SEO basics done right</b><span>Titles, descriptions, headings, and local basics set up properly so Google can find and rank the new site.</span></div></li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Launch + handover</b><span>We launch it, test every link and form, and hand you the logins with a short walkthrough. No hostage situations.</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Launch + handover — tested on real phones</b><span>We launch it, test every link and form on real phones and desktops (not just a preview), and hand you the logins with a short walkthrough. No hostage situations.</span></div></li>
         </ul>
 
         <aside class="price-card">
@@ -520,9 +566,81 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> You keep your domain &amp; content</li>
           </ul>
           <a class="btn btn-green" href="#audit" style="width:100%">Start With the Free Audit</a>
+          <div class="price-referral"><strong>Refer a friend, both save $50:</strong> they pay $450 instead of $500, and you get $50 back once they book. <a href="#referral" style="color:var(--dp-color-accent);font-weight:700">See how it works →</a></div>
           <p class="price-note">Need more than 5 pages, e-commerce, or custom features? We'll quote it honestly after the audit — the rebuild itself stays $500.</p>
         </aside>
       </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO — MOCK / EXAMPLE CONCEPTS -->
+  <section id="portfolio" class="bg-muted">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="example-badge">Mock work — example concepts, not real clients</span>
+        <div class="kicker" style="margin-top:14px">Recent rebuilds — example concepts</div>
+        <h2>What a rebuild looks like</h2>
+        <p class="lede">These are example concepts showing the kind of fix we make — not real client projects. The numbers are illustrative examples of the before/after change a rebuild is designed to deliver, so you can picture it on your own site.</p>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card">
+          <div><div class="biz-type">Local roofing company</div><h3>Slow site → fast, bookable site</h3></div>
+          <div class="mini-browser" aria-label="Example roofing website mock">
+            <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">example-roofing.com — after</span></div>
+            <div class="browser-body">
+              <div class="ba-split"><div><div class="ba-label">Before</div><div class="ba-val bad">6.8s load · 41/100 mobile</div></div><div><div class="ba-label">After — example</div><div class="ba-val good">0.9s load · 97/100 mobile</div></div></div>
+              <div class="mock-img"></div><div class="mock-h"></div><div class="mock-line w75"></div><div class="mock-line w60"></div><span class="mock-btn">Book a Free Estimate</span>
+            </div>
+          </div>
+          <p><strong style="color:var(--dp-color-ink)">The fix:</strong> compressed images, lean code, a clear headline, and one obvious booking button above the fold — instead of a buried phone number.</p>
+          <div class="result-rows">
+            <div><span>Load time (example)</span><b>6.8s → 0.9s</b></div>
+            <div><span>Mobile score (example)</span><b>41 → 97</b></div>
+            <div><span>Booking CTA</span><b>Buried → One clear tap</b></div>
+          </div>
+          <p style="font-size:12.5px">Illustrative example only — not a real client result.</p>
+          <a class="card-cta" href="#audit">See this style for your site — get a free audit →</a>
+        </article>
+
+        <article class="portfolio-card">
+          <div><div class="biz-type">Miami salon / beauty studio</div><h3>Outdated design → clean, mobile-first booking</h3></div>
+          <div class="mini-browser" aria-label="Example salon website mock">
+            <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">example-salon.com — after</span></div>
+            <div class="browser-body">
+              <div class="ba-split"><div><div class="ba-label">Before</div><div class="ba-val bad">Dated · Hard on phones</div></div><div><div class="ba-label">After — example</div><div class="ba-val good">Clean · Mobile-first</div></div></div>
+              <div class="mock-img"></div><div class="mock-h"></div><div class="mock-line w75"></div><div class="mock-line w60"></div><span class="mock-btn">Book Appointment</span>
+            </div>
+          </div>
+          <p><strong style="color:var(--dp-color-ink)">The fix:</strong> modern typography and spacing, services and prices up front, real photos, and online booking in one tap — designed for Instagram visitors on phones.</p>
+          <div class="result-rows">
+            <div><span>Design (example)</span><b>Outdated → Modern</b></div>
+            <div><span>Mobile experience</span><b>Pinch &amp; zoom → Mobile-first</b></div>
+            <div><span>Online booking</span><b>Phone only → 1-tap booking</b></div>
+          </div>
+          <p style="font-size:12.5px">Illustrative example only — not a real client result.</p>
+          <a class="card-cta" href="#audit">See this style for your site — get a free audit →</a>
+        </article>
+
+        <article class="portfolio-card">
+          <div><div class="biz-type">Local gym / fitness studio</div><h3>No clear CTA → class booking that converts</h3></div>
+          <div class="mini-browser" aria-label="Example gym website mock">
+            <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">example-gym.com — after</span></div>
+            <div class="browser-body">
+              <div class="ba-split"><div><div class="ba-label">Before</div><div class="ba-val bad">No clear next step</div></div><div><div class="ba-label">After — example</div><div class="ba-val good">Book a class, everywhere</div></div></div>
+              <div class="mock-img"></div><div class="mock-h"></div><div class="mock-line w75"></div><div class="mock-line w60"></div><span class="mock-btn">Book a Free Class</span>
+            </div>
+          </div>
+          <p><strong style="color:var(--dp-color-ink)">The fix:</strong> a single clear offer — try a free class — repeated on every page, with schedule, prices, and social proof where visitors actually look.</p>
+          <div class="result-rows">
+            <div><span>Main CTA</span><b>None → Book a Free Class</b></div>
+            <div><span>Conversion (example)</span><b>~1% → ~3%</b></div>
+            <div><span>Class booking</span><b>Call only → Online</b></div>
+          </div>
+          <p style="font-size:12.5px">Illustrative example only — not a real client result.</p>
+          <a class="card-cta" href="#audit">See this style for your site — get a free audit →</a>
+        </article>
+      </div>
+      <p class="disclaimer">All three are mock example concepts created to show style and structure. They are not real clients, and the figures are illustrative examples — your audit will use your site's real numbers.</p>
     </div>
   </section>
 
@@ -543,6 +661,34 @@
         <div class="day"><div class="dnum">DAY 7</div><h3>Launch</h3><p>Your new site goes live on your domain. You get all logins and a walkthrough. Fixed — and selling.</p></div>
         <div class="day"><div class="dnum">AFTER</div><h3>You're not locked in</h3><p>The site is yours. Change it yourself, hire anyone, or ask us about ongoing tweaks — your call, no contract.</p></div>
         <div class="day rule"><div class="dnum">THE RULE</div><h3>No launch, no final payment</h3><p>The second half is only due when your new site is live. If we miss day 7 on our end, we keep working free until it's up.</p></div>
+      </div>
+
+      <div class="phase-flow" aria-label="Four phases of every rebuild">
+        <div class="phase"><div class="pnum">Phase 1</div><h3>Research &amp; Strategy</h3><p>We study your customers, competitors, and what your current site is actually doing — before designing anything.</p></div>
+        <div class="phase"><div class="pnum">Phase 2</div><h3>Wireframes &amp; Copy</h3><p>Page structure and conversion-focused words come first, so every section has a job and a clear next step.</p></div>
+        <div class="phase"><div class="pnum">Phase 3</div><h3>Build</h3><p>Mobile-first build with smooth scroll animations, clean typography and spacing, and animated visuals that guide — not distract.</p></div>
+        <div class="phase"><div class="pnum">Phase 4</div><h3>Launch</h3><p>Tested on real phones, speed-checked, and launched on your domain with everything handed over to you.</p></div>
+      </div>
+      <div class="phase-note"><strong>Built to convert, then refined:</strong> where it helps, we can A/B test homepage variations — for example two headlines or two hero layouts — to see what converts best, rather than guessing. Every build is mobile-first, with smooth scroll animations, clean typography and spacing throughout.</div>
+    </div>
+  </section>
+
+  <!-- REVIEWS — HONEST PLACEHOLDERS -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Reviews</div>
+        <h2>What clients say</h2>
+        <p class="lede">We're new — and we'd rather show you an honest empty shelf than fake reviews. The first rebuilds are in progress and their reviews are being collected now. When they land, each one will show the business name and its real before/after result.</p>
+      </div>
+      <div class="review-grid">
+        <article class="review-card"><span class="slot">First reviews coming soon</span><h3>Review slot 1 — example placeholder</h3><p>This space is reserved for a real client review: their business name, what was broken, what we fixed, and the before/after result — in their words.</p><p style="font-size:12.5px">Example placeholder — not a testimonial.</p></article>
+        <article class="review-card"><span class="slot">First reviews coming soon</span><h3>Review slot 2 — example placeholder</h3><p>No invented names, businesses, or star ratings here. Real reviews only, published once a real rebuild is live and the owner is happy to be named.</p><p style="font-size:12.5px">Example placeholder — not a testimonial.</p></article>
+        <article class="review-card"><span class="slot">First reviews coming soon</span><h3>Review slot 3 — example placeholder</h3><p>Yours could be the first one here — with your business name and your site's before/after shown alongside it, with your permission.</p><p style="font-size:12.5px">Example placeholder — not a testimonial.</p></article>
+      </div>
+      <div style="text-align:center;margin-top:28px">
+        <a class="btn btn-green btn-lg" href="#audit">Be one of the first — get your free audit →</a>
+        <p style="margin:12px auto 0;color:var(--dp-color-ink-secondary);font-size:13.5px;max-width:56ch">Reviews will show the business name and before/after result. Until then, the mock portfolio above shows the style — clearly labelled as examples.</p>
       </div>
     </div>
   </section>
@@ -612,6 +758,24 @@
     </div>
   </section>
 
+  <!-- REFERRAL -->
+  <section id="referral">
+    <div class="wrap">
+      <div class="referral-card">
+        <div class="kicker">Refer a friend</div>
+        <h2 style="font-size:clamp(26px,3.6vw,34px)">Know a business with a broken site? You both save $50.</h2>
+        <p class="lede" style="font-size:16px">Plain and simple — no points, no percentages, no fine-print games.</p>
+        <div class="referral-split">
+          <div><div class="amt">$450</div><h3>Your friend pays $450, not $500</h3><p>They get $50 off the flat $500 rebuild when they book through your referral.</p></div>
+          <div><div class="amt">$50 back</div><h3>You get $50 back</h3><p>Once your friend books their rebuild, $50 comes back to you. One referral reward per booked rebuild.</p></div>
+        </div>
+        <p style="margin:0 0 18px;color:var(--dp-color-ink-secondary);font-size:14.5px">One referral reward per booked rebuild. The friend's discount and your $50 back both apply to the standard $500, 7-day rebuild.</p>
+        <a class="btn btn-green" href="https://www.instagram.com/yourwebsitefixed/" target="_blank" rel="noopener">DM @yourwebsitefixed with your friend's site →</a>
+        <span style="display:inline-block;margin-left:10px;font-size:13.5px;color:var(--dp-color-ink-secondary)">Just send us their website link and say who referred them.</span>
+      </div>
+    </div>
+  </section>
+
   <!-- AUDIT -->
   <section id="audit" class="bg-dark">
     <div class="wrap">
@@ -625,6 +789,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> The top 3 things costing you customers</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> A straight yes/no on whether $500 fixes it</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> No pitch deck, no pressure call</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Every rebuild is tested on real phones before launch</li>
           </ul>
         </div>
 
